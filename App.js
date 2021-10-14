@@ -11,6 +11,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Login from "./screens/Login";
 import Home from "./screens/Home";
+import Header from "./components/Header";
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -31,7 +32,18 @@ export default function App() {
             },
           }}
         ></Stack.Screen>
-        <Stack.Screen name='home' component={Home}></Stack.Screen>
+        <Stack.Screen
+          name='home'
+          component={Home}
+          options={{
+            headerStyle: {
+              // width: "100%",
+            },
+            headerTitle: () => <Header />,
+            headerBackVisible: false,
+            headerBackTitleVisible: false,
+          }}
+        ></Stack.Screen>
       </Stack.Navigator>
 
       {/* <StatusBar style='light-content' /> */}
