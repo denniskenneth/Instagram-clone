@@ -9,8 +9,14 @@ const Header = () => {
         <Text style={styles.headerTxt}>Instagram</Text>
       </View>
       <View style={styles.rightHeader}>
-        <View>
-          <AntDesign name='plussquareo' size={24} color='black' />
+        <View style={styles.headerIcon}>
+          <AntDesign name='plussquareo' size={24} color='white' />
+        </View>
+        <View style={styles.headerIcon}>
+          <AntDesign name='hearto' size={24} color='white' />
+        </View>
+        <View style={styles.headerIcon}>
+          <AntDesign name='message1' size={24} color='white' />
         </View>
       </View>
     </View>
@@ -25,7 +31,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     flex: 1,
-    backgroundColor: "blue",
+    // backgroundColor: "blue",
     // paddingHorizontal: 10,
     marginRight: 15,
   },
@@ -40,13 +46,17 @@ const styles = StyleSheet.create({
   headerTxt: {
     textAlign: "center",
     fontSize: 20,
+    color: "white",
   },
 
   rightHeader: {
     flexDirection: "row",
-    backgroundColor: "white",
+    // backgroundColor: "white",
     width: "40%",
     justifyContent: "flex-end",
+  },
+  headerIcon: {
+    paddingHorizontal: 8,
   },
 });
 

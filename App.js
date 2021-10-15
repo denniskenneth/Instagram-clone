@@ -37,7 +37,7 @@ export default function App() {
           component={Home}
           options={{
             headerStyle: {
-              // width: "100%",
+              backgroundColor: "#000",
             },
             headerTitle: () => <Header />,
             headerBackVisible: false,
